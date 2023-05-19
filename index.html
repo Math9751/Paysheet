@@ -5,24 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciamento de Usuários</title>
-  <link rel='stylesheet' href='css/styles.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="css/templatemo-ebook-landing.css" rel="stylesheet">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <script src="js/cep.js" charset="UTF-8"></script>
-  <script src="js/idadePorData.js" charset="UTF-8"></script>
+  <script src="js/cep.js" charset="UTF-8"></script> <!--Função para realizar busca automática de endereço por CEP-->
+  <script src="js/idadePorData.js" charset="UTF-8"></script> <!--Função que calculca a idade a apartir de uma data fornecida-->
   <script charset="utf-8" src="https://platform.twitter.com/js/button.e7f9415a2e000feaab02c86dd5802747.js"></script>
 </head>
 <body>
     <div class="row">
         <form class="col s12">
-          <div class="row">
             <div class="input-field col s6">
               <label for="first_name">Nome:
               <input placeholder="Placeholder" id="first_name" type="text" class="validate"></label>
-            </div>
-           
-            <div class="input-field col s12">
                 <label>Gênero:
                   <select>
                   <option value="" disabled selected>Gênero</option>
@@ -31,40 +38,27 @@
                   <option value="3">Não-binário</option>
                 </select>
                 </label>
-              </div>
-        </form>
-      </div>
-      <div class="container">
-        <form action=".">
-          <label for="birthday">Data de nascimento:</label>
-          <input type="date" id="birthday" name="birthday" onchange="ageCount()">
-          <label>Idade:
-          <!-- <input type="text" id="demo" name="demo" autocomplete="on"> -->
-          <a id="demo"></a></label>
-          <!-- <input type="submit" value="Submit"> -->
-        </form>
-        <!-- <p id="demo"></p> -->
-      <!-- <script type="text/javascript">
-        $('#exemplo').datepicker({	
-          format: "dd/mm/yyyy",	
-          language: "pt-BR",
-          startDate: '+0d',
-        });
-
-      </script> -->
-
-      <form method="get" action=".">
-        <label>Endereço:
-        <input name="rua" type="text" id="rua" size="60" /></label><br />
-        <label>Bairro:
-        <input name="bairro" type="text" id="bairro" size="40" /></label><br />
-        <label>Cidade:
-        <input name="cidade" type="text" id="cidade" size="40" /></label><br />
-        <label>Estado:
-        <input name="uf" type="text" id="uf" size="2" /></label><br />
-        <label>CEP:
-          <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                 onblur="pesquisacep(this.value);" /></label><br />
+                <br>
+                <label for="birthday">Data de nascimento:</label>
+                <input type="date" id="birthday" name="birthday" onchange="ageCount()">
+                <label>Idade:
+                  <a id="demo"></a></label>
+                  <br>
+                  <label>Endereço:
+                    <input name="rua" type="text" id="rua" size="60" /></label><br />
+                    <label>Bairro:
+                      <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+                      <label>Cidade:
+                        <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+                        <label>Estado:
+                          <input name="uf" type="text" id="uf" size="2" /></label><br />
+                          <label>CEP:
+                            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);" /></label><br />
+                            <input type="button" onclick="alert('Bem Vindo!')" value="Registrar">
+                            <input type="reset">
+                            </div>
       </form>
+      </div>
 </body>
 </html>
